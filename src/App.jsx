@@ -1,7 +1,9 @@
+import { Button } from "./components/elements/Button/Index.jsx";
+
 function App() {
   return (
     <div>
-      <h1 className="text-xl">Hello world</h1>
+      <Button></Button>
     </div>
   );
 }
