@@ -3,7 +3,7 @@ import { FormLogin } from "../components/fragments/FormLogin.jsx";
 
 export const LoginPage = () => {
   return (
-    <AuthLayouts title="Login">
+    <AuthLayouts title="Login" type="login">
       <FormLogin />
     </AuthLayouts>
   );
