@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../elements/Button/Index.jsx";
 import { InputForm } from "../elements/input/Index.jsx";
 export const FormRegister = () => {
@@ -32,6 +33,15 @@ export const FormRegister = () => {
         />
       </div>
       <Button>Register</Button>
+      <p className="text-sm text-slate-500 mt-4 text-center">
+        have an account?{" "}
+        <Link
+          to="/login"
+          className="text-blue-600 font-medium hover:underline "
+        >
+          Login
+        </Link>
+      </p>
     </form>
   );
 };
