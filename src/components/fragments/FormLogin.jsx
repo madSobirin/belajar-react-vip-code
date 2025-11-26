@@ -1,8 +1,18 @@
 import { Button } from "../elements/Button/Index.jsx";
 import { InputForm } from "../elements/input/Index.jsx";
 export const FormLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // simpan ke local storage
+    localStorage.setItem("email", e.target.email.value);
+    localStorage.setItem("password", e.target.password.value);
+    window.location.href = "/card";
+    // console.log(e.target.email.value);
+    // console.log(e.target.password.value);
+    console.log("Login success");
+  };
   return (
-    <form action="">
+    <form onSubmit={handleLogin}>
       <InputForm
         label="Email"
         type="email"
@@ -17,7 +27,7 @@ export const FormLogin = () => {
           name="password"
         />
       </div>
-      <Button>Login</Button>
+      <Button type="submit">Login</Button>
     </form>
   );
 };

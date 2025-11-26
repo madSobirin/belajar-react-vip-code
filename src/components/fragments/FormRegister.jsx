@@ -1,8 +1,17 @@
 import { Button } from "../elements/Button/Index.jsx";
 import { InputForm } from "../elements/input/Index.jsx";
 export const FormRegister = () => {
+  const handleRegister = (e) => {
+    e.preventDefault();
+    // simpan ke local storage
+    localStorage.setItem("nama", e.target.fullname.value);
+    localStorage.setItem("password", e.target.password.value);
+    window.location.href = "/card";
+
+    console.log("Register success");
+  };
   return (
-    <form action="">
+    <form onSubmit={handleRegister}>
       <InputForm
         label="Fullname"
         type="text"
@@ -31,7 +40,7 @@ export const FormRegister = () => {
           name="confirmPassword"
         />
       </div>
-      <Button>Register</Button>
+      <Button type="submit">Register</Button>
     </form>
   );
 };
