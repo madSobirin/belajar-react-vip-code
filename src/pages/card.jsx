@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../components/elements/Button/Index";
+import State from "../components/elements/state/Index";
 
 const card = () => {
   const name = localStorage.getItem("nama");
@@ -60,6 +61,9 @@ const card = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div>
+        <State />
       </div>
     </>
   );
